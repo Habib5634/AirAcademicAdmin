@@ -55,7 +55,10 @@ const Sidebar = () => {
 
   if (selectedPage === 'Dashboard') {
     content = (
-      <Dashboard/>
+      <div>
+        <h1>Dashboard Page Content</h1>
+        <p>Content for About page goes here.</p>
+      </div>
     );
   } else if (selectedPage === 'tutorRequest') {
     content = (
