@@ -142,7 +142,7 @@ const Sidebar = () => {
             <ul className="mt-6">
               <li className="mb-2">
                 <button
-                  onClick={() => handleLinkClick('Home')}
+                  onClick={() => handleLinkClick('Dashboard')}
                   className={`flex items-center py-2 w-full ${selectedPage === 'Dashboard' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className="ml-2 flex text-xl  self-center "><RxDashboard size={20} className='mt-1 mr-6' />Dashboard</span>
