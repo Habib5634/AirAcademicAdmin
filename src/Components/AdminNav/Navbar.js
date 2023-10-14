@@ -11,7 +11,7 @@ const AdminNav = () => {
   ];
 
   return (
-    <nav className=' py-2'>
+    <nav className=' py-2 shadow-xl'>
       <div className='flex justify-between px-10 pt-4'>
         <div className='flex items-center'>
           <h1 className='text-3xl font-medium text-[#7644FF] '>Hello Admin</h1>

@@ -5,8 +5,10 @@ import Navbar from '../AdminNav/Navbar'
 import {FaBars,FaUsers} from 'react-icons/fa'
 import {RxDashboard} from 'react-icons/rx'
 import {HiUsers} from 'react-icons/hi'
-import {AiOutlineRight,AiOutlineDown} from 'react-icons/ai'
-
+import {AiOutlineRight,AiOutlineDown,AiOutlineWechat,AiOutlineDollarCircle} from 'react-icons/ai'
+import {MdOutlineWatchLater} from 'react-icons/md'
+import {BiBookContent,BiBell} from 'react-icons/bi'
+import TutorRequests from '../../Pages/Tutors/TutorRequests/TutorRequest';
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(window.innerWidth > 768);
   const [selectedPage, setSelectedPage] = useState('Home');
@@ -14,17 +16,17 @@ const Sidebar = () => {
   const [studentDropdown, setStudentDropdown] = useState(false)
   const [adminDropdown, setAdminDropdown]  = useState(false)
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsOpen(window.innerWidth > 768);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsOpen(window.innerWidth > 768);
+  //   };
 
-    window.addEventListener('resize', handleResize);
+  //   window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
 
 
     const handleTutorDropdown = () =>{
@@ -35,14 +37,14 @@ const Sidebar = () => {
       
       setStudentDropdown(!studentDropdown)
         }
-        const handleAdminDropdown = () =>{
+    const handleAdminDropdown = () =>{
       
-          setAdminDropdown(!adminDropdown)
+      setAdminDropdown(!adminDropdown)
             }
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleSidebar = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   const handleLinkClick = (page) => {
     setSelectedPage(page);
@@ -55,17 +57,11 @@ const Sidebar = () => {
 
   if (selectedPage === 'Dashboard') {
     content = (
-      <div>
-        <h1>Dashboard Page Content</h1>
-        <p>Content for About page goes here.</p>
-      </div>
+      <Dashboard/>
     );
   } else if (selectedPage === 'tutorRequest') {
     content = (
-      <div>
-        <h1>Tutor Request Page Content</h1>
-        <p>Content for About page goes here.</p>
-      </div>
+      <TutorRequests/>
     );
   } else if (selectedPage === 'approvedRequest') {
     content = (
@@ -126,15 +122,53 @@ const Sidebar = () => {
       </div>
     );
   }
+  else if (selectedPage === 'Session') {
+    content = (
+      <div>
+        <h1>Session Page Content</h1>
+        <p>Content for Contact page goes here.</p>
+      </div>
+    );
+  }else if (selectedPage === 'chat') {
+    content = (
+      <div>
+        <h1>Chat Page Content</h1>
+        <p>Content for Contact page goes here.</p>
+      </div>
+    );
+  }else if (selectedPage === 'content') {
+    content = (
+      <div>
+        <h1>Content Page Content</h1>
+        <p>Content for Contact page goes here.</p>
+      </div>
+    );
+  }else if (selectedPage === 'earning') {
+    content = (
+      <div>
+        <h1>earning Page Content</h1>
+        <p>Content for Contact page goes here.</p>
+      </div>
+    );
+  }else if (selectedPage === 'notification') {
+    content = (
+      <div>
+        <h1>notification Page Content</h1>
+        <p>Content for Contact page goes here.</p>
+      </div>
+    );
+  }
 
   return (
-    <div className={`h-screen flex overflow-hidden `}>
+    <div className={`h-screen flex overflow-hidden`}>
       {isOpen && (
         <div className={`w-1/6 bg-white border-r p-3 border-gray-200 `}>
-          <div className=" bg-gray-50">
+          <div className=" bg-gray-50 h-full">
             
             <div className="flex items-center  h-12">
-            <button onClick={toggleSidebar} className="md:hidd text-gray-600">
+            <button 
+            // onClick={toggleSidebar} 
+            className="md:hidd text-gray-600">
               <FaBars size={20} className='text-[#7644FF] ml-2 mr-6' />
             </button>
               <span className="text-xl font-bold self-center text-[#7644FF]">Air Academic</span>
@@ -265,12 +299,45 @@ const Sidebar = () => {
               )}
               <li className="mb-2">
                 <button
-                  onClick={() => handleLinkClick('Contact')}
-                  className={`flex items-center ${selectedPage === 'Contact' ? 'text-blue-500' : 'text-gray-600'}`}
+                  onClick={() => handleLinkClick('Session')}
+                  className={`flex items-center py-2 w-full ${selectedPage === 'Session' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
-                  <span className="ml-2">Contact</span>
+                  <span className="ml-2 flex text-xl  self-center "><MdOutlineWatchLater size={20} className='mt-1 mr-6' />Sessions</span>
                 </button>
               </li>
+              <li className="mb-2">
+                <button
+                  onClick={() => handleLinkClick('chats')}
+                  className={`flex items-center py-2 w-full ${selectedPage === 'chats' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                >
+                  <span className="ml-2 flex text-xl  self-center "><AiOutlineWechat size={20} className='mt-1 mr-6' />Chats</span>
+                </button>
+              </li>
+              <li className="mb-2">
+                <button
+                  onClick={() => handleLinkClick('content')}
+                  className={`flex items-center py-2 w-full ${selectedPage === 'content' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                >
+                  <span className="ml-2 flex text-xl  self-center "><BiBookContent size={20} className='mt-1 mr-6' />Content</span>
+                </button>
+              </li>
+              <li className="mb-2">
+                <button
+                  onClick={() => handleLinkClick('earning')}
+                  className={`flex items-center py-2 w-full ${selectedPage === 'earning' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                >
+                  <span className="ml-2 flex text-xl  self-center "><AiOutlineDollarCircle size={20} className='mt-1 mr-6' />Earning</span>
+                </button>
+              </li>
+              <li className="mb-2">
+                <button
+                  onClick={() => handleLinkClick('notification')}
+                  className={`flex items-center py-2 w-full ${selectedPage === 'notification' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                >
+                  <span className="ml-2 flex text-xl  self-center "><BiBell size={20} className='mt-1 mr-6' />Notifications</span>
+                </button>
+              </li>
+              
             </ul>
           </div>
         </div>
@@ -280,7 +347,9 @@ const Sidebar = () => {
         {content}
       </div>
       {!isOpen && (
-        <button onClick={toggleSidebar} className="md:h fixed top-4 left-4 mt-2   bg-transparent p-2 rounded-full">
+        <button 
+        // onClick={toggleSidebar}
+         className="md:h fixed top-4 left-4 mt-2   bg-transparent p-2 rounded-full">
           <RiMenuLine size={30} />
         </button>
       )}
