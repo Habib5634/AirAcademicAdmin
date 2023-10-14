@@ -11,7 +11,7 @@ import {BiBookContent,BiBell} from 'react-icons/bi'
 import TutorRequests from '../../Pages/Tutors/TutorRequests/TutorRequest';
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(window.innerWidth > 768);
-  const [selectedPage, setSelectedPage] = useState('Home');
+  const [selectedPage, setSelectedPage] = useState('Dashboard');
   const [tutorDropdown,setTutorDropdown] = useState(false)
   const [studentDropdown, setStudentDropdown] = useState(false)
   const [adminDropdown, setAdminDropdown]  = useState(false)
