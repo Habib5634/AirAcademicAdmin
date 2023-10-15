@@ -17,6 +17,8 @@ import DeletedStudent from '../../Pages/Student/DeletedStudent/DeletedStudent';
 import AllAdmins from '../../Pages/Admins/AllAdmins/AllAdmin';
 import AddAdmin from '../../Pages/Admins/AddAdmin/AddAdmin';
 import Session from '../../Pages/Session/Session';
+import Chats from '../../Pages/Chats/Chats';
+import Earning from '../../Pages/Earning/Earning';
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(window.innerWidth > 768);
   const [selectedPage, setSelectedPage] = useState('Dashboard');
@@ -115,31 +117,19 @@ const Sidebar = () => {
     );
   }else if (selectedPage === 'chat') {
     content = (
-      <div>
-        <h1>Chat Page Content</h1>
-        <p>Content for Contact page goes here.</p>
-      </div>
+      <Chats/>
     );
   }else if (selectedPage === 'content') {
     content = (
-      <div>
-        <h1>Content Page Content</h1>
-        <p>Content for Contact page goes here.</p>
-      </div>
+      <Chats/>
     );
   }else if (selectedPage === 'earning') {
     content = (
-      <div>
-        <h1>earning Page Content</h1>
-        <p>Content for Contact page goes here.</p>
-      </div>
+      <Earning/>
     );
   }else if (selectedPage === 'notification') {
     content = (
-      <div>
-        <h1>notification Page Content</h1>
-        <p>Content for Contact page goes here.</p>
-      </div>
+      <Earning/>
     );
   }
 
@@ -291,8 +281,8 @@ const Sidebar = () => {
               </li>
               <li className="mb-2">
                 <button
-                  onClick={() => handleLinkClick('chats')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'chats' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  onClick={() => handleLinkClick('chat')}
+                  className={`flex items-center py-2 w-full ${selectedPage === 'chat' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className="ml-2 flex text-xl  self-center "><AiOutlineWechat size={20} className='mt-1 mr-6' />Chats</span>
                 </button>
