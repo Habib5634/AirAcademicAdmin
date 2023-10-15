@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import requests from './TutorRequestData';
+import requests from './ApprovedRequestData';
 
 import {HiOutlineLocationMarker} from "react-icons/hi"
-import {AiOutlineMail} from "react-icons/ai"
-import {BsTelephone,BsFileText} from "react-icons/bs"
-const TutorRequests = () => {
+import {AiOutlineMail,AiOutlineCheckCircle,AiTwotoneStar } from "react-icons/ai"
+import {MdOutlineWatchLater,MdOutlineHourglassTop} from "react-icons/md"
+import {BsTelephone,BsFileText,BsGenderAmbiguous} from "react-icons/bs"
+import {CgToolbox} from "react-icons/cg"
+import {FaPersonWalkingDashedLineArrowRight} from "react-icons/fa6"
+const ApprovedRequest = () => {
     const [selectedRequest, setSelectedRequest] = useState(null);
     const [selectedDetail, setSelectedDetail] = useState(null); // New state for selected detail
   
@@ -50,17 +53,28 @@ const TutorRequests = () => {
             <div className="bg-gray-50 flex flex-col justify-center items-center p-4 w-1/4 ">
               <img src={selectedRequest.tutorImageUrl} alt='img ' className='h-24 w-24 rounded-full' />
               <h3 className="text-xl font-bold my-2">{selectedRequest.tutorName}</h3>
-              <p className='text-sm text-gray-600'>{selectedRequest.tutorEmail}</p>
-              <p className='text-sm text-gray-400 my-4'><span>{selectedRequest.rating}</span>Reviews <span>{selectedRequest.reviews}</span></p>
+              <div>
+                <button className='text-[#7644FF] text-sm mr-2'>Edit</button>
+                <button className='text-[#7644FF] text-sm'>Delete</button>
+                </div>
+                <h1 className='text-xl text-gray-500 mt-3'>{selectedRequest.subject}</h1>
+                <h1 className='text-xl '>USD $7/hour</h1>
+              <p className='text-sm text-gray-400 mt-4'><span>{selectedRequest.rating}</span>Reviews <span>{selectedRequest.reviews}</span></p>
+
+              <h1 className='mt-3'><span className='text-gray-500'>Skill Level : </span>{selectedRequest.skillLevel}</h1>
+             <hr className='border border-gray-900 my-3 w-full'/>
               <div className='self-start space-y-3 text-gray-600 text-lg'>
-                <h1><HiOutlineLocationMarker/></h1>
-                <h1><AiOutlineMail/></h1>
-                <h1><BsTelephone/></h1>
+                <h1><HiOutlineLocationMarker  className='text-xl mr-1 text-black'  /></h1>
+                <h1><AiOutlineMail className='text-xl mr-1 text-black'/></h1>
+                <h1><BsTelephone className='text-xl mr-1 text-black'/></h1>
+                <h1 className='flex text-sm'><MdOutlineWatchLater className='text-xl mr-1 text-black'/>Time zone: Asia Karachi</h1>
+                <h1 className='flex text-sm'><CgToolbox className='text-xl mr-1 text-black'/>Teaching 4 Students now</h1>
+                <h1 className='flex text-sm'><AiOutlineCheckCircle className='text-xl mr-1 text-black'/>Verified by Air Academic</h1>
+                <h1 className='flex text-sm'><MdOutlineHourglassTop className='text-xl mr-1 text-black'/>Member since 2022</h1>
+                <h1 className='flex text-sm'><FaPersonWalkingDashedLineArrowRight className='text-xl mr-1 text-black'/>23</h1>
+                <h1 className='flex text-sm'><BsGenderAmbiguous className='text-xl mr-1 text-black'/>Female</h1>
               </div>
-              <div className='flex space-x-2 mt-4 '>
-                <button className='text-white bg-[#7c62c4] rounded hover:bg-[#7644FF] transition-colors duration-300 px-4 py-2  '>Accept</button>
-                <button className='text-[#7644FF] border rounded px-4 py-2 border-[#7644FF]  '>Reject</button>
-              </div>
+              
             </div>
             <div className='w-3/4 '>
               <div className="flex justify-around mb-2">
@@ -69,6 +83,8 @@ const TutorRequests = () => {
                 <button className={`px-3 py-3 w-full ${selectedDetail === 'Expertise' ? 'bg-[#7644FF]' : 'bg-gray-300'}`} onClick={() => handleDetailClick('Expertise')}>Expertise</button>
                 <button className={`px-3 py-3 w-full ${selectedDetail === 'Availability' ? 'bg-[#7644FF]' : 'bg-gray-300'}`} onClick={() => handleDetailClick('Availability')}>Availability</button>
                 <button className={`px-3 py-3 w-full ${selectedDetail === 'Subject' ? 'bg-[#7644FF]' : 'bg-gray-300'}`} onClick={() => handleDetailClick('Subject')}>Subject</button>
+                <button className={`px-3 py-3 w-full ${selectedDetail === 'Payment' ? 'bg-[#7644FF]' : 'bg-gray-300'}`} onClick={() => handleDetailClick('Payment')}>Payment</button>
+                <button className={`px-3 py-3 w-full ${selectedDetail === 'Feedback' ? 'bg-[#7644FF]' : 'bg-gray-300'}`} onClick={() => handleDetailClick('Feedback')}>Feedback</button>
               </div>
               {selectedDetail && (
                 <div className="text-gray-600">
@@ -153,6 +169,55 @@ const TutorRequests = () => {
                   </div>
 
                   </>}
+                  {selectedDetail === 'Payment' && <>
+                  <div className='p-4'>
+                  <h3 className=" mb-4 ">{selectedRequest.tutorName}</h3>
+                  <h1 className='flex text-[#7644FF] mb-4 font-bold space-x-1'><span><BsFileText className='text-xl '/></span><span>{selectedRequest.Degree}</span></h1>
+                  <h1 className='text-xs mb-1 text-gray-500 '>Duration : {selectedRequest.duration}</h1>
+                  <h1 className='text-xs mb-4 text-gray-500 '>Grade/CGPA : {selectedRequest.cgpa}</h1>
+              <img src={selectedRequest.tutorImageUrl} alt='img ' className='h-20 w-20 rounded-full' />
+                 <h1 className='mt-2 text-lg '>Certificate</h1>
+                 <h1 className='flex text-[#7644FF] mb-4 font-bold space-x-1'><span><BsFileText className='text-xl '/></span><span>{selectedRequest.Degree}</span></h1>
+
+                 <h1 className='text-xs mb-1 text-gray-500 '>Duration : {selectedRequest.duration}</h1>
+                  <h1 className='text-xs mb-4 text-gray-500 '>Grade/CGPA : {selectedRequest.cgpa}</h1>
+                  <h1 className='text-xs mb-4 text-gray-500 '>{selectedRequest.objective}</h1>
+                  </div>
+
+                  </>}
+                  {selectedDetail === 'Feedback' && <>
+                  <div className='p-4'>
+                  <h1 className='text-2xl'>Rating & Reviews</h1>
+                  <h1 className='my-3 text-black text-lg'>Rating</h1>
+                  <div className='h-16 mb-3 w-full bg-gray-200 rounded-md'></div>
+
+                  <h1 className='mb-3 text-black text-lg  '>Reviews</h1>
+                  <div className='flex flex-col py-4 mb-3 items-start border pl-4 justify-start'>
+                    <span className='flex'>
+                      <AiTwotoneStar className='text-yellow-500'/>
+                      <AiTwotoneStar className='text-yellow-500'/>
+                      <AiTwotoneStar className='text-yellow-500'/>
+                      <AiTwotoneStar className='text-yellow-500'/>
+                      <AiTwotoneStar className='text-yellow-500'/>
+                      
+                      </span>
+                      <h1>Good Product!</h1>
+                  </div>
+                  <div className='flex flex-col py-4 mb-3 items-start border pl-4 justify-start'>
+                  <span className='flex'>
+                      <AiTwotoneStar className='text-yellow-500'/>
+                      <AiTwotoneStar className='text-yellow-500'/>
+                      <AiTwotoneStar className='text-yellow-500'/>
+                      <AiTwotoneStar className='text-yellow-500'/>
+                      <AiTwotoneStar className='text-yellow-500'/>
+                      
+                      </span>
+                      <h1>Amazing Quality!</h1>
+                  </div>
+
+                  </div>
+
+                  </>}
                 </div>
               )}
             </div>
@@ -165,4 +230,4 @@ const TutorRequests = () => {
   );
 };
 
-export default TutorRequests;
+export default ApprovedRequest;

@@ -4,68 +4,58 @@ import {AiOutlineLeft,AiOutlineRight} from 'react-icons/ai'
 
 const data = [
     {
-      student: '1 - hildegard.org',
-      tutors: 'Leanne Graham',
+      id: '1',
       email: 'Sincere@april.biz',
       phone: '1-770-736-8031 x56442',
     },
     {
-      student: '2 - anastasia.net',
-      tutors: '	Ervin Howell',
+        id: '2',
       email: 'Shanna@melissa.tv',
       phone: '	010-692-6593 x09125',
     },
     {
-        student: '3 - ramiro.info',
-        tutors: 'Clementine Bauch',
+        id: '3',
         email: 'Nathan@yesenia.net',
         phone: '1-463-123-4447',
       },
       {
-        student: '4 - kale.biz',
-        tutors: 'Patricia Lebsack',
+        id: '4',
         email: 'Julianne.OConner@kory.org',
         phone: '493-170-9623 x156',
       },
       {
-        student: '5 - demarco.info',
-        tutors: 'Chelsey Dietrich',
+        id: '5',
         email: 'Lucio_Hettinger@annie.ca',
         phone: '(254)954-1289',
       },
       {
-        student: '6 - ola.org',
-        tutors: 'Mrs. Dennis Schulist',
+        id: '6',
         email: 'Karley_Dach@jasper.info',
         phone: '1-477-935-8478 x6430',
       },
       {
-        student: '7 - elvis.io',
-        tutors: 'Kurtis Weissnat',
+        id: '7',
         email: 'Telly.Hoeger@billy.biz',
         phone: '210.067.6132',
       },
       {
-        student: '8 - jacynthe.com',
-        tutors: 'Nicholas Runolfsdottir V',
+        id: '8',
         email: 'Sherwood@rosamond.me',
         phone: '586.493.6943 x140',
       },
       {
-        student: '9 - conrad.com',
-        tutors: 'Glenna Reichert',
+        id: '9',
         email: 'Chaim_McDermott@dana.io',
         phone: '(775)976-6794 x41206',
       },
       {
-        student: '10 - ambrose.net',
-        tutors: 'Clementina DuBuque',
+        id: '10',
         email: 'Rey.Padberg@karina.biz',
         phone: '024-648-3804',
       },
     // Add more data as needed
   ];
-const SessionInProgress = () => {
+const CompletedSession = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [postPerPage] = useState(5);
     const [pagesToShow] = useState(5);
@@ -106,24 +96,22 @@ const SessionInProgress = () => {
     
   return (
     <>
-    <h1 className='text-2xl mb-1 ml-2'>Session In Progress</h1>
+    <h1 className='text-2xl mb-1 ml-2'>Completed Session</h1>
     <div className="overflow-x-auto border border-gray-300 rounded-xl">
       <table className="min-w-full bg-white ">
         <thead>
           <tr className='text-gray-500'>
-            <th className="py-2 px-4 text-start border-b">Student</th>
-            <th className="py-2 px-4 text-start border-b">Tutors</th>
+            <th className="py-2 px-2 text-start border-b">Id</th>
             <th className="py-2 px-4 text-start border-b">Email</th>
             <th className="py-2 px-4 text-start border-b">Phone No</th>
           </tr>
         </thead>
         <tbody>
           {currentPost.map((item, index) => (
-            <tr key={index} className='hover:bg-slate-100'>
-              <td className="py-2 text-gray-500 px-4 text-sm">{item.student}</td>
-              <td className="py-2 text-gray-500 px-4 text-sm">{item.tutors}</td>
-              <td className="py-2 text-gray-500 px-4 text-sm">{item.email}</td>
-              <td className="py-2 text-gray-500 px-4 text-sm">{item.phone}</td>
+            <tr key={item.id} className='hover:bg-slate-100'>
+              <td className="py-1.5 text-gray-500 px-2 text-sm">{item.id}</td>
+              <td className="py-1.5 text-gray-500 px-4 text-sm">{item.email}</td>
+              <td className="py-1.5 text-gray-500 px-4 text-sm">{item.phone}</td>
             </tr>
           ))}
         </tbody>
@@ -154,4 +142,4 @@ const SessionInProgress = () => {
   )
 }
 
-export default SessionInProgress
+export default CompletedSession

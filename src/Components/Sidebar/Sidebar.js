@@ -9,6 +9,14 @@ import {AiOutlineRight,AiOutlineDown,AiOutlineWechat,AiOutlineDollarCircle} from
 import {MdOutlineWatchLater} from 'react-icons/md'
 import {BiBookContent,BiBell} from 'react-icons/bi'
 import TutorRequests from '../../Pages/Tutors/TutorRequests/TutorRequest';
+import ApprovedRequest from '../../Pages/Tutors/ApprovedRequest/ApprovedRequest';
+import ArchievedTutor from '../../Pages/Tutors/ArchievedTutor/ArchievedTutor';
+import TutorVideos from '../../Pages/Tutors/TutorVideos/TutorVideos';
+import CurrentStudent from '../../Pages/Student/CurrentStudent/CurrentStudent';
+import DeletedStudent from '../../Pages/Student/DeletedStudent/DeletedStudent';
+import AllAdmins from '../../Pages/Admins/AllAdmins/AllAdmin';
+import AddAdmin from '../../Pages/Admins/AddAdmin/AddAdmin';
+import Session from '../../Pages/Session/Session';
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(window.innerWidth > 768);
   const [selectedPage, setSelectedPage] = useState('Dashboard');
@@ -65,69 +73,45 @@ const Sidebar = () => {
     );
   } else if (selectedPage === 'approvedRequest') {
     content = (
-      <div>
-        <h1>Approved Request Page Content</h1>
-        <p>Content for Contact page goes here.</p>
-      </div>
+      <ApprovedRequest/>
     );
   }
   else if (selectedPage === 'archivedRequest') {
     content = (
-      <div>
-        <h1>Archived Request Page Content</h1>
-        <p>Content for Contact page goes here.</p>
-      </div>
+      <ArchievedTutor/>
     );
   }
   else if (selectedPage === 'tutorVideos') {
     content = (
-      <div>
-        <h1>Tutor Videos Page Content</h1>
-        <p>Content for Contact page goes here.</p>
-      </div>
+      <TutorVideos/>
     );
   }else if (selectedPage === 'currentStudents') {
     content = (
-      <div>
-        <h1>CurrentStudents Page Content</h1>
-        <p>Content for Contact page goes here.</p>
-      </div>
+      <CurrentStudent/>
     );
   }else if (selectedPage === 'deletedStudents') {
     content = (
-      <div>
-        <h1>Deleted Students Page Content</h1>
-        <p>Content for Contact page goes here.</p>
-      </div>
+      <DeletedStudent/>
     );
   }else if (selectedPage === 'allAdmin') {
     content = (
-      <div>
-        <h1>All Admin Page Content</h1>
-        <p>Content for Contact page goes here.</p>
-      </div>
+      <AllAdmins/>
     );
   }else if (selectedPage === 'addAdmin') {
     content = (
-      <div>
-        <h1>Add Admin Page Content</h1>
-        <p>Content for Contact page goes here.</p>
-      </div>
+      <AddAdmin/>
     );
   }else if (selectedPage === 'removeAdmin') {
     content = (
-      <div>
-        <h1>Remove Admin Page Content</h1>
-        <p>Content for Contact page goes here.</p>
+      <div className='p-4'>
+        <h1>Remove Admin  </h1>
+       
       </div>
     );
   }
   else if (selectedPage === 'Session') {
     content = (
-      <div>
-        <h1>Session Page Content</h1>
-        <p>Content for Contact page goes here.</p>
-      </div>
+      <Session/>
     );
   }else if (selectedPage === 'chat') {
     content = (

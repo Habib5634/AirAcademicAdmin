@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import requests from './TutorRequestData';
+import requests from './ArchienedTutorData';
 
 import {HiOutlineLocationMarker} from "react-icons/hi"
 import {AiOutlineMail} from "react-icons/ai"
@@ -58,8 +58,8 @@ const TutorRequests = () => {
                 <h1><BsTelephone/></h1>
               </div>
               <div className='flex space-x-2 mt-4 '>
-                <button className='text-white bg-[#7c62c4] rounded hover:bg-[#7644FF] transition-colors duration-300 px-4 py-2  '>Accept</button>
-                <button className='text-[#7644FF] border rounded px-4 py-2 border-[#7644FF]  '>Reject</button>
+                <button className='text-white bg-[#7c62c4] rounded hover:bg-[#7644FF] transition-colors duration-300 px-4 py-2  '>UnArchieved</button>
+                <button className='text-[#7644FF] border rounded px-4 py-2 border-[#7644FF]  '>Delete</button>
               </div>
             </div>
             <div className='w-3/4 '>

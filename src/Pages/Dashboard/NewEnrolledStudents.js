@@ -108,7 +108,7 @@ const NewEnrolledStudents = () => {
         </thead>
         <tbody>
           {currentPost.map((item, index) => (
-            <tr key={item.id}>
+            <tr key={item.id} className='hover:bg-slate-100'>
               <td className="py-1.5 text-gray-500 px-2 text-sm">{item.id}</td>
               <td className="py-1.5 text-gray-500 px-4 text-sm">{item.email}</td>
               <td className="py-1.5 text-gray-500 px-4 text-sm">{item.phone}</td>
