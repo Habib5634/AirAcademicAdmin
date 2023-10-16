@@ -151,7 +151,7 @@ const Sidebar = () => {
               <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('Dashboard')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'Dashboard' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center py-2 w-full hover:bg-gray-200 ${selectedPage === 'Dashboard' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className="ml-2 flex text-xl  self-center "><RxDashboard size={20} className='mt-1 mr-6' />Dashboard</span>
                 </button>
@@ -170,7 +170,7 @@ const Sidebar = () => {
  <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('tutorRequest')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'tutorRequest' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center py-2 hover:bg-gray-200 w-full ${selectedPage === 'tutorRequest' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className=" flex text-xl  self-center ml-6">Tutor Request</span>
                 </button>
@@ -178,7 +178,7 @@ const Sidebar = () => {
               <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('approvedRequest')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'approvedRequest' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center py-2 hover:bg-gray-200 w-full ${selectedPage === 'approvedRequest' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className=" flex text-xl  self-center ml-6">Approved Request</span>
                 </button>
@@ -186,7 +186,7 @@ const Sidebar = () => {
               <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('archivedRequest')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'archivedRequest' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center py-2 hover:bg-gray-200 w-full ${selectedPage === 'archivedRequest' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className=" flex text-xl  self-center ml-6">Archieved Request</span>
                 </button>
@@ -194,7 +194,7 @@ const Sidebar = () => {
               <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('tutorVideos')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'tutorVideos' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center py-2 hover:bg-gray-200 w-full ${selectedPage === 'tutorVideos' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className=" flex text-xl  self-center ml-6">Tutor Videos</span>
                 </button>
@@ -206,7 +206,7 @@ const Sidebar = () => {
 <li className="mb-2">
                 <button
                   onClick={handleStudentDropdown}
-                  className={`flex items-center py-2 w-full ${studentDropdown  ? 'text-[#7644FF] bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center py-2 hover:bg-gray-200 w-full ${studentDropdown  ? 'text-[#7644FF] bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className="ml-2 flex text-xl  self-center "><FaUsers size={20} className='mt-1 mr-6' />Students {studentDropdown  ? (<AiOutlineDown className='mt-2 text-sm ml-14'/>):(<AiOutlineRight className='mt-2 text-sm ml-14'/>) }</span>
                 </button>
@@ -216,7 +216,7 @@ const Sidebar = () => {
  <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('currentStudents')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'currentStudents' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center hover:bg-gray-200 py-2 w-full ${selectedPage === 'currentStudents' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className=" flex text-xl  self-center ml-6">Current Students</span>
                 </button>
@@ -224,7 +224,7 @@ const Sidebar = () => {
               <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('deletedStudents')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'deletedStudents' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center hover:bg-gray-200 py-2 w-full ${selectedPage === 'deletedStudents' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                 <span className=" flex text-xl  self-center ml-6">Deleted Students</span>
                 </button>
@@ -236,7 +236,7 @@ const Sidebar = () => {
               <li className="mb-2">
                 <button
                   onClick={handleAdminDropdown}
-                  className={`flex items-center py-2 w-full ${adminDropdown  ? 'text-[#7644FF] bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center hover:bg-gray-200 py-2 w-full ${adminDropdown  ? 'text-[#7644FF] bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className="ml-2 flex text-xl  self-center "><HiUsers size={20} className='mt-1 mr-6' />Admin {adminDropdown  ? (<AiOutlineDown className='mt-2 text-sm  ml-[70px]'/>):(<AiOutlineRight className='mt-2 text-sm ml-[70px] '/>) }</span>
                 </button>
@@ -246,7 +246,7 @@ const Sidebar = () => {
  <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('allAdmin')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'allAdmin' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center hover:bg-gray-200 py-2 w-full ${selectedPage === 'allAdmin' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className=" flex text-xl  self-center ml-6">All Admin</span>
                 </button>
@@ -254,7 +254,7 @@ const Sidebar = () => {
               <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('addAdmin')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'addAdmin' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center hover:bg-gray-200 py-2 w-full ${selectedPage === 'addAdmin' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                 <span className=" flex text-xl  self-center ml-6">Add Admin</span>
                 </button>
@@ -262,7 +262,7 @@ const Sidebar = () => {
               <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('removeAdmin')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'removeAdmin' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center hover:bg-gray-200 py-2 w-full ${selectedPage === 'removeAdmin' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                 <span className=" flex text-xl  self-center ml-6">Remove Admin</span>
                 </button>
@@ -274,7 +274,7 @@ const Sidebar = () => {
               <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('Session')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'Session' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center hover:bg-gray-200 py-2 w-full ${selectedPage === 'Session' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className="ml-2 flex text-xl  self-center "><MdOutlineWatchLater size={20} className='mt-1 mr-6' />Sessions</span>
                 </button>
@@ -282,7 +282,7 @@ const Sidebar = () => {
               <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('chat')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'chat' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center hover:bg-gray-200 py-2 w-full ${selectedPage === 'chat' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className="ml-2 flex text-xl  self-center "><AiOutlineWechat size={20} className='mt-1 mr-6' />Chats</span>
                 </button>
@@ -290,7 +290,7 @@ const Sidebar = () => {
               <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('content')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'content' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center hover:bg-gray-200 py-2 w-full ${selectedPage === 'content' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className="ml-2 flex text-xl  self-center "><BiBookContent size={20} className='mt-1 mr-6' />Content</span>
                 </button>
@@ -298,7 +298,7 @@ const Sidebar = () => {
               <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('earning')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'earning' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center hover:bg-gray-200 py-2 w-full ${selectedPage === 'earning' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className="ml-2 flex text-xl  self-center "><AiOutlineDollarCircle size={20} className='mt-1 mr-6' />Earning</span>
                 </button>
@@ -306,7 +306,7 @@ const Sidebar = () => {
               <li className="mb-2">
                 <button
                   onClick={() => handleLinkClick('notification')}
-                  className={`flex items-center py-2 w-full ${selectedPage === 'notification' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
+                  className={`flex items-center hover:bg-gray-200 py-2 w-full ${selectedPage === 'notification' ? 'text-[#7644FF]  bg-gray-200' : 'text-gray-400'}`}
                 >
                   <span className="ml-2 flex text-xl  self-center "><BiBell size={20} className='mt-1 mr-6' />Notifications</span>
                 </button>

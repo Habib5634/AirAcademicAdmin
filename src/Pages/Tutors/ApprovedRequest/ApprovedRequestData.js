@@ -17,7 +17,9 @@ const requests = [
         currentStudent:10,
         previousStudent:20,
         totalEarning:300,
-        skillLevel:"Medium"  
+        skillLevel:"Medium",
+        location:"Pakistan",
+        phone:"0992347573"   
      },
     
 ];

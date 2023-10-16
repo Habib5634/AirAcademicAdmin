@@ -64,9 +64,9 @@ const ApprovedRequest = () => {
               <h1 className='mt-3'><span className='text-gray-500'>Skill Level : </span>{selectedRequest.skillLevel}</h1>
              <hr className='border border-gray-900 my-3 w-full'/>
               <div className='self-start space-y-3 text-gray-600 text-lg'>
-                <h1><HiOutlineLocationMarker  className='text-xl mr-1 text-black'  /></h1>
-                <h1><AiOutlineMail className='text-xl mr-1 text-black'/></h1>
-                <h1><BsTelephone className='text-xl mr-1 text-black'/></h1>
+              <h1 className='flex  text-sm'><HiOutlineLocationMarker className='text-xl mr-1 text-black'/><span>{selectedRequest.location}</span></h1>
+                <h1 className='flex  text-sm'><AiOutlineMail className='text-xl mr-1 text-black'/><span>{selectedRequest.tutorEmail}</span></h1>
+                <h1 className='flex  text-sm'><BsTelephone className='text-xl mr-1 text-black'/><span>{selectedRequest.phone}</span></h1>
                 <h1 className='flex text-sm'><MdOutlineWatchLater className='text-xl mr-1 text-black'/>Time zone: Asia Karachi</h1>
                 <h1 className='flex text-sm'><CgToolbox className='text-xl mr-1 text-black'/>Teaching 4 Students now</h1>
                 <h1 className='flex text-sm'><AiOutlineCheckCircle className='text-xl mr-1 text-black'/>Verified by Air Academic</h1>

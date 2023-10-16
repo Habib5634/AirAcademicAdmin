@@ -16,7 +16,7 @@ const Dashboard = () => {
       <NewEnrolledStudents/>
     </div>
     </div>
-    <div className='w-1/4'>
+    <div className='w-1/4 pl-4'>
     <ManagerTable/>
     </div>
     </>

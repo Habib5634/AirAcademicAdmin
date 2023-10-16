@@ -49,7 +49,8 @@ const AllAdmins = () => {
     
   return (
     <>
-    <h1 className='text-2xl mb-1 ml-2'>New Enrolled Students</h1>
+    <div className='mt-6 pl-4 pr-4'>
+    <h1 className='text-2xl mb-1 ml-2'>All Admins</h1>
     <div className="overflow-x-auto border border-gray-300 rounded-xl">
       <table className="min-w-full bg-white ">
         <thead>
@@ -109,6 +110,7 @@ const AllAdmins = () => {
                         <AiOutlineRight className='border text-2xl p-1'/>
                     </button>
                 )}
+            </div>
             </div>
     </>
   )

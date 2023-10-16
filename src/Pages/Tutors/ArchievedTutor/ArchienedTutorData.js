@@ -16,7 +16,9 @@ const requests = [
         grade:"1-8",
         currentStudent:10,
         previousStudent:20,
-        totalEarning:300    
+        totalEarning:300  ,
+        location:"Pakistan",
+        phone:"0992347573"    
      },
     { 
         id: 2, 
@@ -35,7 +37,9 @@ const requests = [
         grade:"1-8",
         currentStudent:10,
         previousStudent:20,
-        totalEarning:300  
+        totalEarning:300  ,
+        location:"Pakistan",
+        phone:"0992347573"  
      },
     
 ];

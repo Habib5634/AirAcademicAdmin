@@ -22,7 +22,7 @@ const TutorRequests = () => {
   
 
   return (
-    <div className="flex">
+    <div className="flex ">
       <div className="w-1/4 p-4 mt-4">
         <div className=''>
           {requests.map((request) => (
@@ -53,9 +53,9 @@ const TutorRequests = () => {
               <p className='text-sm text-gray-600'>{selectedRequest.tutorEmail}</p>
               <p className='text-sm text-gray-400 my-4'><span>{selectedRequest.rating}</span>Reviews <span>{selectedRequest.reviews}</span></p>
               <div className='self-start space-y-3 text-gray-600 text-lg'>
-                <h1><HiOutlineLocationMarker/></h1>
-                <h1><AiOutlineMail/></h1>
-                <h1><BsTelephone/></h1>
+                <h1 className='flex '><HiOutlineLocationMarker className='mt-1.5 mr-2'/><span>{selectedRequest.location}</span></h1>
+                <h1 className='flex '><AiOutlineMail className='mt-1.5 mr-2'/><span>{selectedRequest.tutorEmail}</span></h1>
+                <h1 className='flex '><BsTelephone className='mt-1.5 mr-2'/><span>{selectedRequest.phone}</span></h1>
               </div>
               <div className='flex space-x-2 mt-4 '>
                 <button className='text-white bg-[#7c62c4] rounded hover:bg-[#7644FF] transition-colors duration-300 px-4 py-2  '>Accept</button>

@@ -36,14 +36,14 @@ const States = () => {
       
      
           
-      <div className="flex-wrap mt-12 gap-x-12 gap-y-10 items-center justify-center space-y-8 sm:space-y-0 sm:flex xl:justify-center">
+      <div className="flex-wrap mt-12 gap-x-4 gap-y-10 items-center justify-center space-y-8 sm:space-y-0 sm:flex xl:justify-center">
   {stats.map((item, idx) => (
     <div
       key={idx}
       style={{
         backgroundColor: item.backgroundColor,
-        width: "20rem", // Set fixed width
-        height: "8rem", // Set fixed height
+        width: "19rem", // Set fixed width
+        height: "7rem", // Set fixed height
       }}
       className="border p-4 flex items-center "
     >

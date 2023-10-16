@@ -44,6 +44,7 @@ const TutorVideos = () => {
     
   return (
     <>
+    <div className='mt-6 pl-4 pr-4'>
     <h1 className='text-2xl mb-2 mt-6 ml-2'>List of Tutor Videos</h1>
     <div className="overflow-x-auto border border-gray-300 rounded-xl">
       <table className="min-w-full bg-white ">
@@ -85,6 +86,7 @@ const TutorVideos = () => {
                         <AiOutlineRight className='border text-2xl p-1'/>
                     </button>
                 )}
+            </div>
             </div>
     </>
   )
