@@ -136,7 +136,7 @@ const Sidebar = () => {
   return (
     <div className={`h-screen flex overflow-y-auto`}>
       {isOpen && (
-        <div className={`w-1/6 bg-white border-r p-3 border-gray-200 `}>
+        <div className={`w-1/6 overflow-y-auto bg-white border-r p-3 border-gray-200 `}>
           <div className=" bg-gray-50 h-full">
             
             <div className="flex items-center  h-12">
