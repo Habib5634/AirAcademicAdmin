@@ -96,7 +96,10 @@ const CompletedSession = () => {
     
   return (
     <>
+    <div className='flex justify-between'>
     <h1 className='text-2xl mb-1 ml-2'>Completed Session</h1>
+    <button className='text-blue-500 mr-2'>View All</button>
+    </div>
     <div className="overflow-x-auto border border-gray-300 rounded-xl">
       <table className="min-w-full bg-white ">
         <thead>

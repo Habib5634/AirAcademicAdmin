@@ -6,7 +6,7 @@ import CompletedSession from './CompletedSession/CompletedSession'
 const Session = () => {
   return (
     <>
-    <div className='flex justify-between mt-6 p-4'>
+    <div className='flex justify-between mt-6 p-4 '>
         <div><h1 className='text-2xl'> Sessions</h1>
         </div>
         <div>
